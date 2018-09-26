@@ -15,13 +15,7 @@ function RenderDish({dish}) {
       </Card>
   );
 }
-function RenderTitle() {
-  return (
-    <h2>
-      Comments
-    </h2>
-  );
-}
+
 function RenderComments({comments}) {
   return (
     comments.map(comment => {
@@ -58,6 +52,9 @@ const DishDetail = (props) => {
               <RenderDish dish={props.dish} />
           </div>
           <div className="col-12 col-md-5 m-1">
+              <h2>
+                Comments
+              </h2>
               <RenderComments comments={props.comments} />
           </div>
         </div>

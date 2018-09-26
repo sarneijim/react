@@ -3,7 +3,6 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 
 function RenderLeader({leader}) {
-    debugger;
     return(
       <div key={leader.id} className="col-12 mt-5">
         <Media tag="li">
