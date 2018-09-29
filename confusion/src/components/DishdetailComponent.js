@@ -128,10 +128,10 @@ function RenderComments({comments}) {
         <h2>Comments</h2>
         <ul className="list-unstyled">
           <Stagger in>
-            {comments.map(comment => {
+            {comments.map((comment) => {
               return (
-                <Fade in>
-                  <li  key={comment.id}>
+                <Fade in key={comment.id}>
+                  <li  >
                     <p>{comment.comment}</p>
                     <p>--{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month:'short', day:'2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                   </li>
@@ -194,7 +194,7 @@ const DishDetail = (props) => {
     );
   else
     return(
-        <div></div>
+      <div></div>
     );
 }
 
